@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="dankmc:jar">
+    <output-path>$USER_HOME$/Desktop/Factions Server/plugins</output-path>
+    <root id="archive" name="dankmc.jar">
+      <element id="module-output" name="dankmc" />
+    </root>
+  </artifact>
+</component>
