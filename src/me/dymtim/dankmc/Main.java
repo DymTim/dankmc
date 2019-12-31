@@ -2,6 +2,7 @@ package me.dymtim.dankmc;
 
 import me.dymtim.dankmc.commands.DiscordCommand;
 import me.dymtim.dankmc.commands.RankCommand;
+import me.dymtim.dankmc.commands.SetRankCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandMap;
@@ -21,7 +22,10 @@ public class Main extends JavaPlugin implements Listener {
     public void onEnable() {
         enableCommand(new DiscordCommand());
         enableCommand(new RankCommand());
+        SetRankCommand setRankCommand = new SetRankCommand();
+        enableCommand(setRankCommand);
         getServer().getPluginManager().registerEvents(this, this);
+        getServer().getPluginManager().registerEvents(setRankCommand, this);
         instance = this;
         saveConfig();
     }

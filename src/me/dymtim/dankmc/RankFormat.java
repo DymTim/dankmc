@@ -1,17 +1,21 @@
 package me.dymtim.dankmc;
 
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public enum RankFormat {
-    DEFAULT("§7"),
-    OWNER("§c§lOWNER§c ");
+    DEFAULT("§7", Material.GRASS),
+    OWNER("§c§lOWNER§c ", Material.DIAMOND_BLOCK);
 
     public final String prefix;
-    RankFormat(String prefix) {
+    public final Material material;
+
+    RankFormat(String prefix, Material material) {
         this.prefix = prefix;
+        this.material = material;
     }
 
     private static Map<Player, RankFormat> ranks = new HashMap<>();

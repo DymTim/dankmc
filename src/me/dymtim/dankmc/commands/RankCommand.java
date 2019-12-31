@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class RankCommand extends Command {
     public RankCommand() {
-        super("rank", "Command for setting ranks.", "/rank", new ArrayList<String>());
+        super("rank", "View a player's current rank.", "/rank", new ArrayList<>());
     }
 
     public boolean execute(CommandSender sender, String label, String[] args) {
